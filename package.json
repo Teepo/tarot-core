@@ -4,7 +4,7 @@
   "repository": "https://github.com/Teepo/tarot-core.git",
   "author": "Anthony Ribeiro",
   "publishConfig": {
-    "@teepo:registry": "https://npm.pkg.github.com"
+    "@teepo:registry": "https://yarn.pkg.github.com"
   },
   "scripts": {
     "tsc": "tsc --noEmit"
