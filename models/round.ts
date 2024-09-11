@@ -1,12 +1,12 @@
-import { cardList    } from '@/config/cardList';
-import { gameTypeList } from '@/config/gameTypeList';
-import { pointToReachByBout } from '@/config/pointsToReachByBout';
-import { ratioByGameType    } from '@/config/ratioByGameType';
+import { cardList    } from './../config/cardList';
+import { gameTypeList } from './../config/gameTypeList';
+import { pointToReachByBout } from './../config/pointsToReachByBout';
+import { ratioByGameType    } from './../config/ratioByGameType';
 
-import { Player } from '@/models/player';
-import { Card } from '@/models/card';
-import { Deck } from '@/models/deck';
-import type { Turn } from '@/models/turn';
+import { Player } from './player';
+import { Card } from './card';
+import { Deck } from './deck';
+import type { Turn } from './turn';
 
 import store from '@/store';
 
