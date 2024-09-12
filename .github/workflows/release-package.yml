@@ -16,6 +16,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22.6
+          always-auth: true
           registry-url: https://yarn.pkg.github.com/
       - name: Set deployment token
         run: npm config set '//registry.npmjs.org/:_authToken' "${NPM_AUTH_TOKEN}"
