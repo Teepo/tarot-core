@@ -2,9 +2,6 @@ name: Node.js Package
 
 on: push
 
-env:
-  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
 jobs:
   publish-gpr:
     runs-on: ubuntu-latest
@@ -17,12 +14,8 @@ jobs:
         with:
           node-version: 22.6
           always-auth: true
-          registry-url: https://yarn.pkg.github.com/
-      - name: Set deployment token
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        run: npm config set '//registry.npmjs.org/:_authToken' "${GITHUB_TOKEN}"
+          registry-url: 'https://registry.npmjs.org'
       - run: yarn
       - run: yarn publish
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
