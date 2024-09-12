@@ -18,6 +18,6 @@ jobs:
           node-version: 22.6
           registry-url: https://yarn.pkg.github.com/
       - name: Set deployment token
-        run: yarn config set '//npm.pkg.github.com/:_authToken' "${GITHUB_TOKEN}"
+        run: npm config set '//registry.npmjs.org/:_authToken' "${GITHUB_TOKEN}"
       - run: yarn
       - run: yarn publish
